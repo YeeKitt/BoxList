@@ -9,7 +9,7 @@ import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
-    ListView lvToDo;
+    ListView lvBox;
     ArrayList<box> alBoxList;
     CustomAdapter caBox;
 
@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        lvToDo = findViewById(R.id.listVIewBox);
+        lvBox = findViewById(R.id.listVIewBox);
 
         alBoxList = new ArrayList<>();
         box item1 = new box("blue");
@@ -30,6 +30,6 @@ public class MainActivity extends AppCompatActivity {
 
         caBox = new CustomAdapter(this, R.layout.box_item, alBoxList);
 
-        lvToDo.setAdapter(caBox);
+        lvBox.setAdapter(caBox);
     }
 }
